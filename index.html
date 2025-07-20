@@ -1,11 +1,56 @@
-<!doctype html>
-<html>
+<html style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Black.png/250px-Black.png');">
 <head>
-<title>Mouks Test</title>
-<meta name="description" content="page">
-<meta name="keywords" content="html tutorial template">
+<style>
+h1 {
+  color: white;
+  font-family: papyrus;
+  font-size: 300%;
+}
+p {
+  color: white;
+  font-family: papyrus;
+  font-size: 150%;
+}
+</style>
+<title>m</title>
 </head>
 <body>
-Content goes here.
+<h1 id=demo></h1>
+<p id=demo2></p>
+
+<script>
+var i = 0;
+var v = 0;
+var speed = 50;
+var speed2 = 90;
+var txt = 'i am deeply depressed and i\'m trying my best'
+var txt2 = 'but my hope is to be known for something before im gone'
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+	return
+  }
+  setTimeout(typeWriter2,speed2);
+}
+
+function typeWriter2() {
+if (v < txt2.length) {
+    document.getElementById("demo2").innerHTML += txt2.charAt(v);
+    v++;
+    setTimeout(typeWriter2, speed2);
+  }
+}
+</script>
+
+<script>
+typeWriter()
+</script>
+
+<audio src="man.mp3" autoplay loop="true"></audio>
+
 </body>
+
 </html>
